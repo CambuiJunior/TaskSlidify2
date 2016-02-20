@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle       : Exploring the Diamonds\nframework   : revealjs\nhighlighter : highlight.js\nhitheme     : default \nwidgets     : []\nmode        : selfcontained\nknit        : slidify::knit2slides\n---\n\n\n## Coursera Task\n\nFeb 10, 2016\nE.Cambui Junior\n\n\n---\n\n\n## Exploring the Diamonds\n\nWhat drives the **diamond's** prices?\n\n\n---\n\n\n## Exploring the Diamonds\n\nExplore the connection between several features of diamonds, like carat, cut, clarity, color and price\n\n\n---\n\n## Diamonds with ggplot2\n\n```{r, echo=5}\nlibrary(ggplot2)\ndata(diamonds)\ndiamonds<-diamonds[sample(1:nrow(diamonds),2000),]\nggplot(diamonds, aes(carat, price))+geom_point(color=\"firebrick\")\n```\n\n\n---\n\n\nExample Calculation\n\nlibrary(ggplot2); data(diamonds)\nsubset = diamonds$carat < 1.5 & diamonds$cut == \"Ideal\" & diamonds$clarity == \"VS1\"\nqplot(carat, price, data = diamonds[subset,], colour = color, geom = c(\"point\", \"smooth\"),method = \"lm\")\n\n\n---",
+    "created" : 1455836023914.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3152003426",
+    "id" : "4F686CCB",
+    "lastKnownWriteTime" : 1455840277,
+    "last_content_update" : 1455842003572,
+    "path" : "~/TaskSilidy/first_slides/index.Rmd",
+    "project_path" : "first_slides/index.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
